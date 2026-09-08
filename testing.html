@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmulatorJS on Google Sites</title>
+    <style>
+        html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #000; }
+        #game-container { width: 100%; height: 100vh; }
+    </style>
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="emulator"></div>
+    </div>
+
+    <script>
+        // Set up EmulatorJS configuration variables
+        EJS_player = '#emulator';
+        EJS_core = 'nes'; // Change this to match your system (e.g., 'snes', 'gba', 'segaMD')
+        
+        // Use the official EmulatorJS CDN for the core data files
+        EJS_pathtodata = 'https://emulatorjs.org'; 
+        
+        // Link to your hosted game ROM (Must support CORS/HTTPS)
+        EJS_gameUrl = 'YOUR_DIRECT_ROM_URL_HERE'; 
+    </script>
+    
+    <!-- Load the main EmulatorJS loader script from CDN -->
+    <script src="https://emulatorjs.orgloader.js"></script>
+
+</body>
+</html>
